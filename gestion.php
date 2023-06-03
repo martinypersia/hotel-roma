@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +26,13 @@
 
 
 
+=======
+<?php include('components/header.php'); ?>
+<?php include('components/menu.php'); ?>
+<div class="containerGeneral">
+    <h2 style="margin-bottom: 60px;">Gestión</h2>
+</div>
+>>>>>>> 309b21c5e9f58808b4e3fe2d6240dc668d208d73
 
 
-</body>
-
-</html>
+<?php include('components/footer.php'); ?>
