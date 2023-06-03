@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/fontello.css">
-</head>
-
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Hotel Roma</h1>
-            </div>
-            <nav class="menu">
-                <a href="#">Usuario</a>
-                
-            </nav>
-        </div>
-    </header>
-    <div class="capa"></div>
+<?php include('header.php'); ?>
+<div class="upbar">
+    Buenas tardes 
+    <i class="fa-solid fa-user"></i>
+    </div>
 
     
-</body>
-</html>
+
+    <div class="sidebar">
+        <header>Hotel Roma</header>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fa-solid fa-bell-concierge"></i>Gestión</a></li>
+            <li><a href="#"><i class="fa-solid fa-wrench"></i>Mantenimiento</a></i></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>Usuarios</a></i></li>
+        </ul>
+    </div>
+
+
+<?php include('footer.php'); ?>
