@@ -4,7 +4,7 @@
         <img src="assets/logo.png" alt="logoHotel" width="228px">
     </header>
     <ul>
-        <li><a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
+        <li><a class="nav-link" href="inicio.php" style="color: white;"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style="color: white;">
@@ -27,7 +27,7 @@
                 <a class="dropdown-item" href="#">Pisos</a>
             </div>
         </li>
-        <li><a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-user"></i>Usuarios</a></i></li>
+        <li><a class="nav-link" href="usuarios.php" style="color: white;"><i class="fa-solid fa-user"></i>Usuarios</a></i></li>
     </ul>
 </div>
 <?php include('footer.php'); ?>

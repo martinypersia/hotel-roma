@@ -1,7 +1,7 @@
 <?php include('components/header.php'); ?>
 <?php include('components/menu.php'); ?>
 <div class="containerGeneral">
-    <h2>Mantenimiento</h2>
+    <h2 style="margin-bottom: 60px;">Mantenimiento</h2>
 
 
 </div>
