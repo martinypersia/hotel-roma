@@ -1,10 +1,7 @@
 <?php include('components/header.php'); ?>
-    <header class="header">
-        <div class="container">
-            <h2>WEEEEN dia</h2>
-        </div>
-    </header>
-    <div class="capa"></div>
+<div class="containerGeneral">
+    <h2>Gestión</h2>
+</div>
 
 
-    <?php include('components/footer.php'); ?>
+<?php include('components/footer.php'); ?>
