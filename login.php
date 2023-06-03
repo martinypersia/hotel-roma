@@ -1,4 +1,5 @@
 <?php include('components/header.php'); ?>
+<?php include('components/menu.php'); ?>
     <center>
 <h1>Inicio de Sesión</h1>
 
