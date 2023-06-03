@@ -8,15 +8,23 @@
     <title>Gestion</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/fontello.css">
+    <script src="https://kit.fontawesome.com/f9bfb39d5f.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <h2>WEEEEN dia</h2>
-        </div>
-    </header>
-    <div class="capa"></div>
+    <div class="upbar">
+    Buenas tardes 
+    <i class="fa-solid fa-user"></i>
+    </div>
+    
+    <div class="mostrar-gestion-recepcion">
+        
+
+    </div>
+
+
+
+
 
 
 </body>
