@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('components/header.php'); ?>
 <h1>Menú de prueba</h1>
 
 <div class="vertical-menu">
@@ -53,4 +53,4 @@
     </ul>
 
 </div>
-<?php include('footer.php'); ?>
+<?php include('components/footer.php'); ?>

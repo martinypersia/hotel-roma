@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('components/header.php'); ?>
     <center>
 <h1>Inicio de Sesión</h1>
 
@@ -16,4 +16,4 @@
 	</form>
   
     
-	<?php include('footer.php'); ?>
+	<?php include('components/footer.php'); ?>

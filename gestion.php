@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('components/header.php'); ?>
     <header class="header">
         <div class="container">
             <h2>WEEEEN dia</h2>
@@ -7,4 +7,4 @@
     <div class="capa"></div>
 
 
-    <?php include('footer.php'); ?>
+    <?php include('components/footer.php'); ?>

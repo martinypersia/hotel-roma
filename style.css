@@ -46,7 +46,7 @@ ul li:hover a{
     background: #063146;
     font-size: 40px;
     color: white;
-    width: 1200px;
+    width: 100% !important;
     height: 71px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.8;
