@@ -128,10 +128,10 @@
                             </div>
                         </div>
 
-                        <div class="modal-footer">
+                       
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary" da>Guardar</button>
-                        </div>
+                    <imput type="submit" class="btn btn-primary" da>Guardar</imput>
+                        
 
                     </form>
                 </div>

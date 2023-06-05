@@ -2,7 +2,7 @@
 include("conexion.php");
 //igualacion de variables//
 
-$documento=$_POST['idvendedor'];
+$documento=$_POST['documento'];
 $nombre=$_POST['nombre'];
 $apellido=$_POST['apellido'];
 $direccion=$_POST['direccion'];
