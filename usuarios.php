@@ -1,5 +1,6 @@
 <?php include('components/header.php'); ?>
 <?php include('components/menu.php'); ?>
+<?php include('conexion.php');?>
 <div class="containerGeneral">
     <h2 style="margin-bottom: 60px;">Usuarios</h2>
     <div class="card shadow mb-4">
@@ -24,22 +25,28 @@
                                     <th>Nro Documento</th>
                                     <th>Nombre</th>
                                     <th>Apellido</th>
-                                    <th>Correo</th>
-                                    <th>Tipo</th>
-                                    <th>Estado</th>
-                                    <th></th>
+                                    <th>Dirección</th>
+                                    <th>Telefono</th>
                                 </tr>
                             </thead>
+                            
                             <tfoot>
+                                <?php
+                                $sql="SELECT * from vendedor";
+                                $result=mysqli_query($conexion,$sql);
+                                while($mostrar=mysqli_fetch_array($result)){;
+                                ?>
                                 <tr>
-                                    <th>Nro Documento</th>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Correo</th>
-                                    <th>Tipo</th>
-                                    <th>Estado</th>
-                                    <th></th>
+                                    <th><?php echo $mostrar['idvendedor'] ?></th>
+                                    <th><?php echo $mostrar['nombre'] ?></th>
+                                    <th><?php echo $mostrar['apellido'] ?></th>
+                                    <th><?php echo $mostrar['direccion'] ?></th>
+                                    <th><?php echo $mostrar['telefono'] ?></th>
                                 </tr>
+                                <?php
+                                }
+                                ?>
+                                
                             </tfoot>
                             <tbody></tbody>
                         </table>
@@ -65,13 +72,13 @@
                 </div>
                 <div class="modal-body">
                     <input id="txtid" type="hidden" value="0" />
-                    <form id="formNivel">
+                    <form id="formNivel" action="ingresar.php" method="post">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Nro Documento:</label>
                                     <input type="text" class="form-control required" id="txtdocumento"
-                                        name="descripcion" autocomplete="off">
+                                        name="documento" autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -79,7 +86,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Nombre:</label>
-                                    <input type="text" class="form-control required" id="txtnombre" name="descripcion"
+                                    <input type="text" class="form-control required" id="txtnombre" name="nombre"
                                         autocomplete="off">
                                 </div>
                             </div>
@@ -88,7 +95,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Apellido:</label>
-                                    <input type="text" class="form-control required" id="txtapellido" name="descripcion"
+                                    <input type="text" class="form-control required" id="txtapellido" name="apellido"
                                         autocomplete="off">
                                 </div>
                             </div>
@@ -96,9 +103,18 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="txtdescripcion">Correo:</label>
-                                    <input type="text" class="form-control required" id="txtcorreo" name="descripcion"
+                                    <label for="txtdescripcion">Dirección:</label>
+                                    <input type="text" class="form-control required" id="txtdireccion" name="direccion"
                                         autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="txtdescripcion">Telefono:</label>
+                                    <input type="text" class="form-control required" id="txttelefono"
+                                        name="telefono" autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -106,37 +122,18 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Contraseña:</label>
-                                    <input type="password" class="form-control required" id="txtclave"
-                                        name="descripcion" autocomplete="off">
+                                    <input type="password" class="form-control required" id="txtpassword"
+                                        name="password" autocomplete="off">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="cbotipo">Tipo:</label>
-                                    <select id="cbotipo" class="form-control"></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="cboEstado">Estado:</label>
-                                    <select id="cboEstado" class="form-control">
-                                        <option value="1">Activo</option>
-                                        <option value="0">No Activo</option>
-                                    </select>
-                                </div>
-                            </div>
+
+                        <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" da>Guardar</button>
                         </div>
 
                     </form>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" >Guardar</button>
                 </div>
             </div>
         </div>

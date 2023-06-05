@@ -9,8 +9,8 @@
         <div class="dropdown nav-link" style="margin-bottom: 5px;">
             <a style="color:white;"><i class="fa-solid fa-bell-concierge"></i>Gestión</a>
             <div class="dropdown-content">
-                <a href="gestion.php">Recepción</a>
-                <a href="gestion.php">Salida</a>
+                <a href="gestionrecep.php">Recepción</a>
+                <a href="gestionsalida.php">Salida</a>
             </div>
         </div>
         <div class="dropdown nav-link">

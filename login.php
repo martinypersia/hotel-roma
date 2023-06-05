@@ -1,20 +1,29 @@
 <?php include('components/header.php'); ?>
-<?php include('components/menu.php'); ?>
     <center>
-<h1>Inicio de Sesión</h1>
-
 <?php
 	include("conexion.php");
 	include("verificador.php");
-	?>	
+?>	
 
-	<form action="" method="post">
-		<label for="username">Nombre de usuario:</label>
-		<input type="text" id="username" name="usuario"><br><br>
-		<label for="password">Contraseña:</label>
-		<input type="password" id="password" name="password"><br><br>
-		<input name="ingresar" type="submit" value="Ingresar">
-	</form>
+	<br><br>
+	<br><br>
+	
+	<div class="login">
+    <h2>Inicio de sesión</h2>
+    <form action="" method="post">
+	Nro Documento
+      <input type="text" name="usuario" id="usuario" class="input">
+      <br>
+	Contraseña
+      <input type="password" name="password" id="input" class="input">
+      <br>
+	  <?php
+include("verificador.php");
+?>	
+<br>
+      <input type="submit" name="ingresar" value="Iniciar sesión">
+    </form>
+  </div>
   
     
 	<?php include('components/footer.php'); ?>
