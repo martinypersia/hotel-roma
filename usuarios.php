@@ -29,7 +29,7 @@
                                     <th>Telefono</th>
                                 </tr>
                             </thead>
-                            
+
                             <tfoot>
                                 <?php
                                 $sql="SELECT * from vendedor";
@@ -46,7 +46,7 @@
                                 <?php
                                 }
                                 ?>
-                                
+
                             </tfoot>
                             <tbody></tbody>
                         </table>
@@ -72,13 +72,13 @@
                 </div>
                 <div class="modal-body">
                     <input id="txtid" type="hidden" value="0" />
-                    <form id="formNivel" action="ingresar.php" method="post">
+                    <form id="formNivel" action="components/ingresar.php" method="post">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Nro Documento:</label>
-                                    <input type="text" class="form-control required" id="txtdocumento"
-                                        name="documento" autocomplete="off">
+                                    <input type="text" class="form-control required" id="txtdocumento" name="documento"
+                                        autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -113,8 +113,8 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Telefono:</label>
-                                    <input type="text" class="form-control required" id="txttelefono"
-                                        name="telefono" autocomplete="off">
+                                    <input type="text" class="form-control required" id="txttelefono" name="telefono"
+                                        autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -129,10 +129,10 @@
                         </div>
 
                         <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary" da>Guardar</button>
-                        </div>
 
+                        </div>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary" da>Guardar</button>
                     </form>
                 </div>
             </div>
