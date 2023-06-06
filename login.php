@@ -12,10 +12,10 @@
         <h2>Inicio de sesión</h2>
         <form action="" method="post">
             Nro Documento
-            <input type="text" name="usuario" id="usuario" class="input">
+            <input type="text" name="usuario" id="usuario" class="input" required>
             <br>
             Contraseña
-            <input type="password" name="password" id="input" class="input">
+            <input type="password" name="password" id="input" class="input" required>
             <br>
             <?php
 include("verificador.php");
