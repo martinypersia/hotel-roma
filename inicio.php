@@ -1,7 +1,18 @@
 <?php include('components/header.php'); ?>
 <?php include('components/menu.php'); ?>
-<?php include('conexion.php');?>
-<div class="containerGeneral">
+<div class=" containerGeneral">
+    <?php session_start(); 
+if(isset($_SESSION['usuario'])){
+    $usuarioIngresado=$_SESSION['usuario'];
+    echo "<h1>Bienvenido $usuarioIngresado</h1>";
+}else{
+    header('location:login.php');
+}
+if(isset($_POST['btncerrar'])){
+    session_destroy();
+    header('location:login.php');
+};?>
+    <form method="POST"><input type="submit" value="cerrame esta" name="btncerrar" /></form>
     <h2 style="margin-bottom: 60px;">Dashboard</h2>
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
@@ -15,6 +26,8 @@
                             <div class="h5 mb-0 font-weight-bold text-dark" id="totalhabitaciones">
                                 <?php 
 $dash_total_query = "SELECT * from habitacion";
+$conexion = mysqli_connect("localhost","root","","hotel");
+$conexion-> set_charset("UTF8");
 $dash_total_query_run = mysqli_query($conexion, $dash_total_query);
 
  if($total = mysqli_num_rows($dash_total_query_run)){
