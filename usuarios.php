@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FormModal">
-                        Crear Nuevo
+                        Crear nuevo Usuario
                     </button>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="modal-body">
                     <input id="txtid" type="hidden" value="0" />
-                    <form id="formNivel" action="components/ingresar.php" method="post">
+                    <form id="formNivel" action="ingresos/ingresarUsuario.php" method="post">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
@@ -128,14 +128,7 @@
                             </div>
                         </div>
 
-<<<<<<< HEAD
-                       
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                    <imput type="submit" class="btn btn-primary" da>Guardar</imput>
-                        
-=======
                         <div class="modal-footer">
->>>>>>> 05cdf862cd36dc324d1c048c1edffcaa6ca5a9e0
 
                         </div>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>

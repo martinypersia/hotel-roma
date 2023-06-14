@@ -9,16 +9,16 @@
         <div class="dropdown nav-link" style="margin-bottom: 5px;">
             <a style="color:white;"><i class="fa-solid fa-bell-concierge"></i>Gestión</a>
             <div class="dropdown-content">
-                <a href="gestionrecep.php">Recepción</a>
-                <a href="gestionsalida.php">Salida</a>
+                <a href="gestionRecepcion.php">Recepción</a>
+                <a href="gestionSalida.php">Salida</a>
             </div>
         </div>
         <div class="dropdown nav-link">
             <a style="color:white;"><i class="fa-solid fa-wrench"></i>Mantenimiento</a>
             <div class="dropdown-content">
-                <a href="mantenimiento.php">Habitaciones</a>
-                <a href="mantenimiento.php">Categoria</a>
-                <a href="mantenimiento.php">Pisos</a>
+                <a href="mantenimientoHabitaciones.php">Habitaciones</a>
+                <a href="mantenimientoCategorias.php">Categoria</a>
+                <a href="mantenimientoPisos.php">Pisos</a>
             </div>
         </div>
         <li><a class="nav-link" href="usuarios.php" style="color: white;"><i
