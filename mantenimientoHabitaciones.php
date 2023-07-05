@@ -140,47 +140,46 @@
 
 
     <div class="modal fade" id="editModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Nueva Habitación</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input id="txtid" type="hidden" value="0" />
-                    <form id="formNivel"  method="post">
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Habitación</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input id="txtid" type="hidden" value="0" />
+                <form id="formNivel" method="post">
 
                     <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="txtdescripcion">Numero de habitación</label>
-                                    <select class="form-control" id="habitacion" name="habitacion">
-                                        <?php
-                                            $sql_pisos = "UPDATE numhabitacion FROM habitacion";
-                                            $result_pisos = mysqli_query($conexion, $sql_pisos);
-                                            while ($mostrar_pisos = mysqli_fetch_array($result_pisos)) {
-                                                echo '<option value="' . $mostrar_pisos['idhabitacion'] . '">' . $mostrar_pisos['numhabitacion'] . '</option>';
-                                            }
-                                        ?>
-                                    </select>
-                            </div>    
-
-                        
-                        
-                        
-                        <div class="modal-footer">
-
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="txtdescripcion">Numero de habitación</label>
+                                <select class="form-control" id="habitacion" name="habitacion">
+                                    <?php
+                                    $sql_habitaciones = "SELECT * FROM habitacion";
+                                    $result_habitaciones = mysqli_query($conexion, $sql_habitaciones);
+                                    while ($mostrar_habitaciones = mysqli_fetch_array($result_habitaciones)) {
+                                        echo '<option value="' . $mostrar_habitaciones['idhabitacion'] . '">' . $mostrar_habitaciones['numhabitacion'] . '</option>';
+                                    }
+                                    ?>
+                                </select>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary" da>Guardar</button>
-                    </form>
-                </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+
     
    
 

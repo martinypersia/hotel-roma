@@ -4,7 +4,7 @@ include("../conexion.php");
 
 $numhabitacion=$_POST['numhabitacion'];
 $piso=$_POST['piso'];
-$cod_categoria=$_POST['cod_ctegoria'];
+$cod_categoria=$_POST['cod_categoria'];
 
 
 $sql="INSERT into habitacion (numhabitacion,piso,cod_categoria,codestado) 
