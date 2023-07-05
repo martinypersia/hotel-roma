@@ -93,14 +93,14 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Habitacion:</label>
-                                    <select class="form-control" id="numhabitacion" name="numhabitacion">
+                                    <select class="form-control" id="idhabitacion" name="idhabitacion">
                                         <?php
                                             $sql_habitacion = "SELECT * FROM habitacion where codestado = 1";
                                             $result_habitacion = mysqli_query($conexion, $sql_habitacion);
                                             while ($mostrar_habitacion = mysqli_fetch_array($result_habitacion)) {
                                                 echo '<option value="' . $mostrar_habitacion['idhabitacion'] . '">' . $mostrar_habitacion['numhabitacion'] . '</option>';
                                             }
-                                            
+
                                         ?>
                                     </select>
                                 </div>

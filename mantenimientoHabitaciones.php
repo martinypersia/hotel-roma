@@ -60,7 +60,7 @@
         </div>
     </div>
 
-     <!-- Modal -->
+    
 
     <div class="modal fade" id="FormModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -79,7 +79,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Numero de habitación</label>
-                                    <input type="text" class="form-control required" id="numhabitacion" name="numhabitacion"
+                                    <input type="number" class="form-control required" id="numhabitacion" name="numhabitacion"
                                         autocomplete="off">
                                 </div>
                             </div>
@@ -159,10 +159,10 @@
                                     <label for="txtdescripcion">Numero de habitación</label>
                                     <select class="form-control" id="habitacion" name="habitacion">
                                         <?php
-                                            $sql_pisos = "UPDATE numhabitacion FROM habitacion";
+                                            $sql_pisos = "UPDATE codestado FROM habitacion";
                                             $result_pisos = mysqli_query($conexion, $sql_pisos);
                                             while ($mostrar_pisos = mysqli_fetch_array($result_pisos)) {
-                                                echo '<option value="' . $mostrar_pisos['idhabitacion'] . '">' . $mostrar_pisos['numhabitacion'] . '</option>';
+                                                echo '<option value="' . $mostrar_pisos['codestado'] . '">' . $mostrar_pisos['desc_estado'] . '</option>';
                                             }
                                         ?>
                                     </select>

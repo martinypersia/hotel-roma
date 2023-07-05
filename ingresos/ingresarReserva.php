@@ -18,7 +18,7 @@ $sql="INSERT into reserva (dni_pasaporte,nombre,apellido,
 direccion,patente,fecha_entrada,fecha_salida,precio,idvendedor,idhabitacion) VALUES('$dni_pasaporte',
 '$nombre','$apellido','$direccion','$patente','$fecha_entrada','$fecha_salida','$precio','$idvendedor','$idhabitacion')";
 
-$sql = "UPDATE habitacion SET codestado = 2 WHERE codestado = 1";
+
 $resu=mysqli_query($conexion, $sql) or die ($sql . mysqli_error($conexion));
 
 ?>

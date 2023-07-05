@@ -73,7 +73,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Piso</label>
-                                    <input class="form-control" name="piso" type="text" >
+                                    <input class="form-control" name="piso" type="number" >
                                 </div>
                             </div>
                         </div>

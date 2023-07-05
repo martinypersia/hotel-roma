@@ -23,12 +23,13 @@
                                     <th>Apellido</th>
                                     <th>Dirección</th>
                                     <th>Patente</th>
+                                    <th>Habitación</th>
                                 </tr>
                             </thead>
 
                             <tfoot>
                              <?php
-                                $sql="SELECT * from reserva";
+                                $sql="SELECT * from reserva inner join habitacion on reserva.idhabitacion = habitacion.idhabitacion";
                                 $result=mysqli_query($conexion,$sql);
                                 while($mostrar=mysqli_fetch_array($result)){;
                                 ?>
@@ -38,6 +39,7 @@
                                     <th><?php echo $mostrar['apellido']?></th>
                                     <th><?php echo $mostrar['direccion']?></th>
                                     <th><?php echo $mostrar['patente']?></th>
+                                    <th><?php echo $mostrar['numhabitacion']?></th>
                                 </tr>
 
                                 <?php
