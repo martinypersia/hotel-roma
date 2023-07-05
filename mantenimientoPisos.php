@@ -73,6 +73,7 @@
                                     <input class="form-control" name="piso" type="text" >
                                 </div>
                             </div>
+                        </div>
 
                         <div class="row">
                             <div class="col-sm-12">

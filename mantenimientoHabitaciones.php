@@ -25,21 +25,25 @@
                             <thead>
                                 <tr>
                                     <th>Número de habitación</th>
-                                    <th>Categoria</th>
+                                    <th>Tipo</th>
+                                    <th>Descripcion </th>
                                     <th>Piso</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
 
                             <tfoot>
                             <?php
-                                $sql="SELECT * from habitacion";
+                                $sql="SELECT * from habitacion inner join categoria on habitacion.cod_categoria = categoria.cod_categoria";
                                 $result=mysqli_query($conexion,$sql);
                                 while($mostrar=mysqli_fetch_array($result)){;
                                 ?>
                                 <tr>
                                     <th><?php echo $mostrar['numhabitacion']?></th>
-                                    <th><?php echo $mostrar['cod_categoria']?></th>
+                                    <th><?php echo $mostrar['nombre_categoria']?></th>
+                                    <th><?php echo $mostrar['desc_categoria']?></th>
                                     <th><?php echo $mostrar['piso']?></th>
+                                    <th></th>
                                 </tr>
 
                                 <?php
@@ -73,7 +77,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Numero de habitación</label>
-                                    <input type="text" class="form-control required" id="txtdocumento" name="numhabitacion"
+                                    <input type="text" class="form-control required" id="numhabitacion" name="numhabitacion"
                                         autocomplete="off">
                                 </div>
                             </div>
@@ -81,9 +85,16 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="txtdescripcion">Categoria</label>
-                                    <input type="text" class="form-control required" id="txtapellido" name="cod_categoria"
-                                        autocomplete="off">
+                                    <label for="txtdescripcion">Tipo</label>
+                                    <select class="form-control" id="cod_categoria" name="cod_categoria">
+                                        <?php
+                                            $sql_categoria = "SELECT * FROM categoria";
+                                            $result_categoria = mysqli_query($conexion, $sql_categoria);
+                                            while ($mostrar_categoria = mysqli_fetch_array($result_categoria)) {
+                                                echo '<option value="' . $mostrar_categoria['cod_categoria'] . '">' . $mostrar_categoria['nombre_categoria'] . '</option>';
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +103,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtnombre">Piso</label>
-                                    <select class="form-control" id="txtnombre" name="nombre">
+                                    <select class="form-control" id="piso" name="piso">
                                         <?php
                                             $sql_pisos = "SELECT DISTINCT piso FROM piso";
                                             $result_pisos = mysqli_query($conexion, $sql_pisos);

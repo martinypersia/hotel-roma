@@ -1,18 +1,7 @@
 <?php include('components/header.php'); ?>
 <?php include('components/menu.php'); ?>
+
 <div class=" containerGeneral">
-    <?php session_start(); 
-if(isset($_SESSION['usuario'])){
-    $usuarioIngresado=$_SESSION['usuario'];
-    echo "<h1>Bienvenido $usuarioIngresado</h1>";
-}else{
-    header('location:login.php');
-}
-if(isset($_POST['btncerrar'])){
-    session_destroy();
-    header('location:login.php');
-};?>
-    <form method="POST"><input type="submit" value="cerrame esta" name="btncerrar" /></form>
     <h2 style="margin-bottom: 60px;">Dashboard</h2>
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">

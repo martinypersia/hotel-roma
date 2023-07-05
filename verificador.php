@@ -7,14 +7,15 @@ if(!empty($_POST["ingresar"])) {
         $usuario=$_POST["usuario"];
         $password=$_POST["password"];
         $sql=$conexion->query("select * from vendedor where idvendedor='$usuario' and contrasena='$password' ");
-        if(!isset($_SESSION['usuario'])){
+        header("location:inicio.php");
+        /* if(!isset($_SESSION['usuario'])){
             if ($datos=$sql->fetch_object()) {
                 $_SESSION['usuario'] = $usuario;
                 header("location:inicio.php");
             } else {
                 echo "ACCESO DENEGADO";
             }
-        }
+        } */
     }
 }
 

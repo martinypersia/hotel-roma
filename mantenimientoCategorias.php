@@ -1,6 +1,7 @@
 <?php include('components/header.php'); ?>
 <?php include('components/menu.php'); ?>
 <?php include('conexion.php'); ?>
+
 <div class="containerGeneral">
     <h2 style="margin-bottom: 60px;">Mantenimiento Categoria</h2>
 
@@ -31,12 +32,12 @@
 
                             <tfoot>
                             <?php
-                                $sql="SELECT cod_categoria,desc_categoria from categoria";
+                                $sql="SELECT * from categoria";
                                 $result=mysqli_query($conexion,$sql);
                                 while($mostrar=mysqli_fetch_array($result)){;
                                 ?>
                                 <tr>
-                                    <th><?php echo $mostrar['cod_categoria']?></th>
+                                    <th><?php echo $mostrar['nombre_categoria']?></th>
                                     <th><?php echo $mostrar['desc_categoria']?></th>
                                 </tr>
                                 <?php
@@ -70,9 +71,10 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Categoria</label>
-                                    <input class="form-control" name="cod_categoria" type="text" >
+                                    <input class="form-control" name="nombre_categoria" type="text" >
                                 </div>
                             </div>
+                        </div>
 
                         <div class="row">
                             <div class="col-sm-12">

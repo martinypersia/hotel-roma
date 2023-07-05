@@ -69,4 +69,7 @@
     color: #FFFFFF;
     background-color: #00A4BD;
   }
-  
+ .card-header py-3 bg-primary{
+  color: aquamarine;
+
+ }
