@@ -2,7 +2,6 @@
 <?php include('components/menu.php'); ?>
 <?php include('conexion.php'); ?>
 <div class="containerGeneral">
-    <h2 style="margin-bottom: 60px;">clientes</h2>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3 bg-primary ">
@@ -29,7 +28,7 @@
 
                             <tfoot>
                              <?php
-                                $sql="SELECT * from cliente";
+                                $sql="SELECT * from reserva";
                                 $result=mysqli_query($conexion,$sql);
                                 while($mostrar=mysqli_fetch_array($result)){;
                                 ?>

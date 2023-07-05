@@ -41,10 +41,10 @@ $dash_total_query_run = mysqli_query($conexion, $dash_total_query);
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 Habitaciones Disponibles
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-primary" id="habitacionesdisponibles">
+                            <div class="h5 mb-0 font-weight-bold text-success" id="habitacionesdisponibles">
                                 <?php 
 $dash_disponibles_query = "SELECT * from habitacion where codestado = '1' ";
 $dash_disponibles_query_run = mysqli_query($conexion, $dash_disponibles_query);
@@ -59,7 +59,7 @@ $dash_disponibles_query_run = mysqli_query($conexion, $dash_disponibles_query);
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-box fa-2x text-primary"></i>
+                            <i class="fas fa-box fa-2x text-success"></i>
                         </div>
                     </div>
                 </div>

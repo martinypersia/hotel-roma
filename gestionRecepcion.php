@@ -4,13 +4,13 @@
 <div class="containerGeneral">
 
     <div class="card shadow mb-4">
-        <div class="card-header py-3 bg-primary ">
+        <div class="card-header py-3 bg-success ">
             <h6 class="m-0 font-weight-bold text-white">Lista de habitaciones Disponibles</h6>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FormModal">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#FormModal">
                           Registrar reserva
                     </button>
                 </div>
@@ -76,14 +76,31 @@
                     <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
+                                    <label for="txtdescripcion">Empleado:</label>
+                                    <select class="form-control" id="idvendedor" name="idvendedor">
+                                        <?php
+                                            $sql_habitacion = "SELECT * FROM vendedor";
+                                            $result_habitacion = mysqli_query($conexion, $sql_habitacion);
+                                            while ($mostrar_habitacion = mysqli_fetch_array($result_habitacion)) {
+                                                echo '<option value="' . $mostrar_habitacion['idvendedor'] . '">' . $mostrar_habitacion['apellido'] . '</option>';
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
                                     <label for="txtdescripcion">Habitacion:</label>
                                     <select class="form-control" id="numhabitacion" name="numhabitacion">
                                         <?php
                                             $sql_habitacion = "SELECT * FROM habitacion where codestado = 1";
                                             $result_habitacion = mysqli_query($conexion, $sql_habitacion);
                                             while ($mostrar_habitacion = mysqli_fetch_array($result_habitacion)) {
-                                                echo '<option value="' . $mostrar_habitacion['numhabitacion'] . '">' . $mostrar_habitacion['numhabitacion'] . '</option>';
+                                                echo '<option value="' . $mostrar_habitacion['idhabitacion'] . '">' . $mostrar_habitacion['numhabitacion'] . '</option>';
                                             }
+                                            
                                         ?>
                                     </select>
                                 </div>
@@ -112,15 +129,6 @@
                                 <div class="form-group">
                                     <label for="txtdescripcion">Apellido:</label>
                                     <input type="text" class="form-control required" id="txtapellido" name="apellido"
-                                        autocomplete="off">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="txtdescripcion">Fecha de nacimiento:</label>
-                                    <input type="text" class="form-control required" id="txtfecha_nacimiento" name="fecha_nacimiento"
                                         autocomplete="off">
                                 </div>
                             </div>
@@ -169,6 +177,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         
 
 

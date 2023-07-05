@@ -2,20 +2,23 @@
 include("../conexion.php");
 //igualacion de variables//
 
-$dni_pasaporte=$POST['dni_pasaporte'];
-$nombre=$POST['nombre'];
-$apellido=$POST['apellido'];
-$fecha_nacimiento=$POST['fecha_nacimiento'];
-$direccion=$POST['direccion'];
-$patente=$POST['patente'];
-$fecha_entrada=$POST['fecha_entrada'];
-$fecha_salida=$POST['fecha_salida'];
-$precio=$POST['precio'];
+$dni_pasaporte=$_POST['dni_pasaporte'];
+$nombre=$_POST['nombre'];
+$apellido=$_POST['apellido'];
+$direccion=$_POST['direccion'];
+$patente=$_POST['patente'];
+$fecha_entrada=$_POST['fecha_entrada'];
+$fecha_salida=$_POST['fecha_salida'];
+$precio=$_POST['precio'];
+$idvendedor=$_POST['idvendedor'];
+$idhabitacion=$_POST['idhabitacion'];
 
-$sql="INSERT into venta (dni_pasaporte,nombre,apellido,fecha_nacimiento,
-direccion,patente,fecha_entrada,fecha_salida,precio) VALUES('$dni_pasaporte',
-'$nombre','$apellido','$fecha_nacimiento','$direccion','$patente','$fecha_entrada','$fecha_salida','$precio')";
 
+$sql="INSERT into reserva (dni_pasaporte,nombre,apellido,
+direccion,patente,fecha_entrada,fecha_salida,precio,idvendedor,idhabitacion) VALUES('$dni_pasaporte',
+'$nombre','$apellido','$direccion','$patente','$fecha_entrada','$fecha_salida','$precio','$idvendedor','$idhabitacion')";
+
+$sql = "UPDATE habitacion SET codestado = 2 WHERE codestado = 1";
 $resu=mysqli_query($conexion, $sql) or die ($sql . mysqli_error($conexion));
 
 ?>
