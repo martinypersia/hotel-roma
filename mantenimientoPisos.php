@@ -73,7 +73,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="txtdescripcion">Piso</label>
-                                    <input class="form-control" name="piso" type="number" >
+                                    <input class="form-control" name="piso" type="text" >
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,6 @@
                         <div class="modal-footer">
 
                         </div>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-primary" da>Guardar</button>
                     </form>
                 </div>

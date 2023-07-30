@@ -2,7 +2,11 @@
 <?php include('components/menu.php'); ?>
 
 <div class=" containerGeneral">
-    <h2 style="margin-bottom: 60px;">Dashboard</h2>
+    <div class="panel-control">
+    <h2 style="margin-bottom: 60px;">Panel de Control</h2>
+    </div>
+<br>   
+    
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-dark shadow h-100 py-2" style="max-width: 316px;">
@@ -126,6 +130,8 @@ $dash_limpieza_query_run = mysqli_query($conexion, $dash_limpieza_query);
             </div>
         </div>
     </div>
+
+    
 
 
 </div>

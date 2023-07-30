@@ -19,6 +19,20 @@
     background: #042331;
 }
 
+.panel-control{
+  border: 2px solid #333; /* Borde de 2 píxeles sólido de color gris oscuro (#333) */
+  padding: 10px; /* Espaciado interno de 10 píxeles para separar el texto del borde */
+  background-color: #ffffff; /* Color de fondo gris claro (#f0f0f0) */
+  width: 400px; /* Ancho del cuadro (ajústalo según tus necesidades) */
+  height: 65px;
+  position: relative;
+  left: 30%;
+  text-align: center; /* Centrar el texto dentro del cuadro */
+  font-size: 18px; /* Tamaño de fuente del texto */
+  color: #333; /* Color del texto */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .sidebar ul a i{
     margin-right: 16px;
 }
@@ -71,5 +85,4 @@
   }
  .card-header py-3 bg-primary{
   color: aquamarine;
-
  }

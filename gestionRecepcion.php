@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#FormModal">
-                        Registrar reserva
+                    <i class="fa-solid fa-circle-up"></i> Check In
                     </button>
                 </div>
             </div>
@@ -63,7 +63,7 @@
         <div class="modal-dialog modal-dialog-center modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Ingresar datos del cliente</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-circle-up"></i> Ingresar datos del cliente</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -102,11 +102,7 @@
                                             while ($mostrar_habitacion = mysqli_fetch_array($result_habitacion)) {
                                                 echo '<option value="' . $mostrar_habitacion['idhabitacion'] . '">' . $mostrar_habitacion['numhabitacion'] . '</option>';
                                             }
-<<<<<<< HEAD
-
-=======
                                         }
->>>>>>> 7281c9929cfd7f002d8b68b39bacb9ad648944da
                                         ?>
                                     </select>
                                 </div>
@@ -123,7 +119,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="txtdescripcion">Nombre</label>
+                                    <label for="txtdescripcion">Nombre:</label>
                                     <input type="text" class="form-control required" id="txtnombre" name="nombre" autocomplete="off">
                                 </div>
                             </div>
@@ -171,7 +167,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="txtdescripcion">Precio</label>
+                                    <label for="txtdescripcion">Precio:</label>
                                     <input type="text" class="form-control required" id="txtprecio" name="precio" autocomplete="off">
                                 </div>
                             </div>

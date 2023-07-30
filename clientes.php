@@ -24,6 +24,8 @@
                                     <th>Dirección</th>
                                     <th>Patente</th>
                                     <th>Habitación</th>
+                                    <th>Fecha Entrada</th>
+                                    <th>Fecha Salida</th>
                                 </tr>
                             </thead>
 
@@ -40,6 +42,8 @@
                                     <th><?php echo $mostrar['direccion']?></th>
                                     <th><?php echo $mostrar['patente']?></th>
                                     <th><?php echo $mostrar['numhabitacion']?></th>
+                                    <th><?php echo $mostrar['fecha_entrada']?></th>
+                                    <th><?php echo $mostrar['fecha_salida']?></th>
                                 </tr>
 
                                 <?php

@@ -131,7 +131,6 @@
                         <div class="modal-footer">
 
                         </div>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-primary" da>Guardar</button>
                     </form>
                 </div>
